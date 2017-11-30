@@ -8,7 +8,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     
     <!-- Angular JS -->
-    <script src="/webjars/angularjs/1.6.6/angular.min.js"></script>
+    <script src="lib/angularjs/1.6.6/angular.min.js"></script>
     
     <!-- Angular Busy -->
     <script src="lib/angular-busy/4.1.4/angular-busy.js"></script>
@@ -32,7 +32,7 @@
       <!-- SELECT BACKEND section -->
       <div style="border: 1px solid lightgrey; width: 96%; border-radius: 12px; padding: 6px;" class="col-sm-12">
       	<div class="row">
-      		<h5 class="col-sm-12">Serviço de backend</h5>
+      		<h5 class="col-sm-12">Serviï¿½o de backend</h5>
       	</div>
       	<form name="chooseBackendForm">
       		<div ng-repeat="opt in ctrl.BACKEND_OPTIONS track by $index" class="form-group">
@@ -55,14 +55,14 @@
       	</div>
       		<form name="addTaskForm" class="row">
 		      	<div class="col-sm-3">
-		      		<label>Descrição</label> 
+		      		<label>Descriï¿½ï¿½o</label> 
 		      		<input type="text" ng-model="ctrl.descriptionToAdd" 
 		      			size="80" class="form-control"
 		      			ng-required="true"/>
 				</div>
 				
 				<div class="col-sm-3">
-		      		<label>Atribuído para</label> 
+		      		<label>Atribuï¿½do para</label> 
 		      		<select ng-model="ctrl.userToAdd" 
 		      			ng-options="user.name for user in ctrl.allUsers" 
 		      			class="form-control" 
@@ -86,9 +86,9 @@
    	  <div ng-class="{'card-done': task.done, 'card': !task.done}" ng-repeat="task in ctrl.allTasks | orderBy: 'id' : true">
        	<h4 class="card-title">{{::task.description}}</h4>
        	{{::task.id}}
-       	{{::task.user.name}}, concluir até {{::task.dueDate | date : 'd/MMM/yyyy'}}
+       	{{::task.user.name}}, concluir atï¿½ {{::task.dueDate | date : 'd/MMM/yyyy'}}
        	<button ng-if="!task.done" class="btn btn-secondary" style="max-width: 6rem;" 
-       		ng-click="ctrl.markDone(task.id)">Concluído</button>
+       		ng-click="ctrl.markDone(task.id)">Concluï¿½do</button>
 	  </div>
     </div>
   </body>
